@@ -1,13 +1,22 @@
 // The single source of truth for business details and unknown values.
 // PLACEHOLDER: set SITE_URL and BASE_PATH here, or use deployment environment overrides.
+const configuredSiteUrl = process.env.SITE_URL || ""; // PLACEHOLDER: final public URL is not yet known.
+const parsedSiteUrl = new URL(configuredSiteUrl || "http://localhost:4321/");
+if (!['http:', 'https:'].includes(parsedSiteUrl.protocol)) throw new Error('SITE_URL must be an HTTP(S) URL');
+if (parsedSiteUrl.search || parsedSiteUrl.hash || parsedSiteUrl.username || parsedSiteUrl.password) throw new Error('SITE_URL cannot contain credentials, a query or fragment');
+const normalizedBase = `/${(process.env.BASE_PATH ?? parsedSiteUrl.pathname).replace(/^\/+|\/+$/g, '')}/`.replace('//', '/');
 export const site = {
   name: "Friction Classes",
   tagline: "A little grip. A world of possibility.",
   phone: "+91 80768 70866",
   whatsapp: "918076870866",
   EMAIL: "", // PLACEHOLDER: email is unknown; all email links stay hidden until supplied.
-  siteUrl: process.env.SITE_URL || "", // PLACEHOLDER: final domain is undecided.
-  basePath: process.env.BASE_PATH || "/",
+  siteUrl: `${parsedSiteUrl.origin}${normalizedBase}`,
+  basePath: normalizedBase,
+  isPublicSite: !!configuredSiteUrl && !['localhost', '127.0.0.1', '[::1]'].includes(parsedSiteUrl.hostname),
+  // Illustrative, dated time-zone comparisons, not offered appointment slots.
+  comparisonDates: ['2027-01-15', '2027-07-15'],
+  contentReviewed: '2026-11-13',
   socialLinks: [], // PLACEHOLDER: add { label: 'Instagram', url: 'https://...' } when known.
   demoMessage:
     "Hi Friction Classes, I'd like to book a demo class for my child (Class __).",
@@ -149,12 +158,14 @@ export const link = (path = "") =>
   `${site.basePath.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
 export const whatsapp = (message = site.demoMessage) =>
   `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+export const absoluteUrl = (path = '') => new URL(path.replace(/^\/+/, ''), site.siteUrl).href;
 export const navigation = [
   ["About", "about/"],
   ["Programs", "programs/"],
   ["Subjects", "subjects/"],
   ["Our Mentors", "mentors/"],
   ["For NRI Families", "nri-families/"],
+  ["Learn", "learn/"],
 ];
 export const steps = [
   {

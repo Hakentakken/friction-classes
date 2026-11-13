@@ -1,0 +1,5 @@
+---
+import { countries } from '../data/countries.mjs';
+import GuideCards from './GuideCards.astro';
+---
+<section id="country-guides" class="section wrap"><p class="eyebrow">A ROUTINE WHERE YOU LIVE</p><h2>Local school questions.<br/><em>Practical timing guides.</em></h2><p class="reading-intro">Compare example class windows with time in India, and prepare the curriculum questions that matter for your family. These are planning guides, not local branches.</p><GuideCards items={countries.map(country => ({title:`Learning from ${country.name}`,description:country.intro,path:`nri-families/${country.slug}/`}))}/></section>

@@ -39,7 +39,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -975,11 +975,11 @@ details p {
   margin-top: 22px;
 }
 .footer-brand .muted {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
   font-size: 12px;
 }
 .footer-top h2 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans Variable", sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0;
@@ -1399,6 +1399,14 @@ details p {
 :root[data-theme="dark"] .field input,
 :root[data-theme="dark"] .field select {
   border-color: #80957f;
+}
+/* Defer layout of distant home sections while keeping their HTML available.
+   The browser remembers measured sizes as a visitor scrolls. */
+@supports (content-visibility: auto) {
+  .home-page main > .section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 750px;
+  }
 }
 @media (min-width: 1500px) {
   .hero {

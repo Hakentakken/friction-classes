@@ -1,0 +1,26 @@
+[
+  {
+    "width": 390,
+    "theme": "light",
+    "revealElements": 22,
+    "allVisibleOnScroll": true
+  },
+  {
+    "width": 1440,
+    "theme": "light",
+    "revealElements": 22,
+    "allVisibleOnScroll": true
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "revealElements": 22,
+    "allVisibleOnScroll": true
+  },
+  {
+    "width": 1440,
+    "theme": "dark",
+    "revealElements": 22,
+    "allVisibleOnScroll": true
+  }
+]

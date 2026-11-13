@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Button from '../../components/Button.astro';
+import Closing from '../../components/Closing.astro';
+import GuideCards from '../../components/GuideCards.astro';
+import { countries } from '../../data/countries.mjs';
+import { articles } from '../../data/guides.mjs';
+import { timingRows } from '../../lib/time-windows.mjs';
+import { site, link } from '../../config.mjs';
+export function getStaticPaths() { return countries.map(country => ({params:{country:country.slug},props:{country}})); }
+const { country } = Astro.props;
+const rows = timingRows(country.windows);
+const dateLabel = (value:string) => new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',day:'numeric',month:'short',year:'numeric'}).format(new Date(`${value}T12:00:00Z`));
+---
+<Layout title={country.title}>
+<section class="page-hero wrap"><Breadcrumbs/><p class="eyebrow">A PARENT GUIDE · {country.name.toUpperCase()}</p><h1>{country.title}</h1><p>{country.intro}</p></section>
+<div class="wrap guide-layout section"><article class="guide-prose">
+<section id="curriculum"><h2>{country.angle}</h2>{country.paragraphs.map(text => <p>{text}</p>)}<p class="source-note">School-system context: <a href={country.sources[0].url}>{country.sources[0].label}</a>. Confirm the current syllabus and any placement decision with your school.</p></section>
+<section id="class-windows"><p class="eyebrow">PLANNING, NOT APPOINTMENT AVAILABILITY</p><h2>Find a window worth discussing.</h2><p>{country.scheduling}</p><p>{country.clockNote}</p><div class="table-scroll" role="region" aria-label={`${country.name} and India example class windows`} tabindex="0"><table class="time-table"><caption>Example local-time windows and their India equivalents. All times use the 24-hour clock. Dates are comparisons, not lesson bookings.</caption><thead><tr><th scope="col">City / idea</th><th scope="col">Example date</th><th scope="col">Local time</th><th scope="col">India (IST)</th></tr></thead><tbody>{rows.map(row => <tr><th scope="row">{row.city}<small>{row.label}</small></th><td><time datetime={row.date}>{dateLabel(row.date)}</time></td><td>{row.local}</td><td>{row.india}</td></tr>)}</tbody></table></div><p class="small-note">On a narrow screen, scroll the table sideways. These are illustrative windows, not stated mentor working hours. We confirm your city, date, local time and availability before booking. Time-policy changes can affect future conversions.</p><p>For a repeatable routine, see <a href={link('learn/study-routines-across-time-zones/')}>how to plan study across time zones</a>.</p></section>
+<section id="parent-questions"><h2>Questions parents in {country.name} ask</h2><div class="faq-list">{country.questions.map(faq => <details><summary>{faq.q}<span aria-hidden="true">+</span></summary><p>{faq.a}</p></details>)}</div></section>
+<section class="source-note"><h2>Sources and scope</h2><p>Country-specific facts reviewed {dateLabel(site.contentReviewed)}. The learning and scheduling suggestions are our practical guidance, not admissions advice or a claim of local accreditation.</p><ul>{country.sources.map(source => <li><a href={source.url}>{source.label}</a></li>)}</ul><p>Compare <a href={link('nri-families/#country-guides')}>guides for other countries</a> or return to our <a href={link('nri-families/')}>online tuition guide for NRI students</a>.</p></section>
+</article><aside class="guide-sidebar"><p class="eyebrow">BEFORE WE TALK</p><h2>A useful starting point</h2><ul class="topic-list">{country.checklist.map(item => <li>{item}</li>)}</ul><Button/><p class="small-note">Message us for a personalized plan. Subject fit, timing and mentor availability are confirmed together.</p><nav aria-label="On this page"><a href="#curriculum">School and curriculum questions</a><a href="#class-windows">Compare example class windows</a><a href="#parent-questions">Parent questions</a></nav><a class="text-link" href={link('programs/')}>Explore Classes 1–9 programs ↗</a></aside></div>
+<section class="section wrap"><p class="eyebrow">READ NEXT</p><h2>Make the next step clearer.</h2><GuideCards items={articles.filter(article => country.related.includes(article.slug)).map(article => ({title:article.title,description:article.description,path:`learn/${article.slug}/`}))}/></section><Closing/>
+</Layout>

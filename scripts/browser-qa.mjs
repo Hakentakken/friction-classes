@@ -2,27 +2,15 @@ import { chromium } from "@playwright/test";
 import fs from "node:fs";
 import assert from "node:assert/strict";
 import AxeBuilder from "@axe-core/playwright";
+import { pageRegistry } from '../src/lib/seo.mjs';
 
 fs.mkdirSync("qa/screenshots", { recursive: true });
 const browser = await chromium.launch();
-const origin = process.env.QA_URL || "http://localhost:4321";
+const origin = process.env.QA_URL || "http://localhost:4322";
 const errors = [];
 const results = [];
 const accessibility = [];
-const pages = [
-  "",
-  "about/",
-  "programs/",
-  "subjects/",
-  "mentors/",
-  "how-it-works/",
-  "nri-families/",
-  "faq/",
-  "contact/",
-  "privacy/",
-  "terms/",
-  "404.html",
-];
+const pages = Object.keys(pageRegistry);
 for (const theme of ["light", "dark"]) {
   for (const width of [320, 390, 1440]) {
     const context = await browser.newContext({
@@ -46,6 +34,11 @@ for (const theme of ["light", "dark"]) {
       const response = await page.goto(`${origin}/${route}`);
       assert(response?.ok(), `Response ${route}`);
       await page.evaluate(() => document.fonts.ready);
+      // Render deferred below-fold sections before full-page visual/a11y checks.
+      for (const section of await page.locator('main > .section').all()) {
+        await section.scrollIntoViewIfNeeded();
+      }
+      await page.evaluate(() => window.scrollTo(0, 0));
       assert.equal(await page.getAttribute("html", "data-theme"), theme);
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth > innerWidth,
@@ -78,9 +71,9 @@ for (const theme of ["light", "dark"]) {
           })),
         });
       }
-      if (width !== 320 && ["", "contact/", "mentors/"].includes(route))
+      if (width !== 320 && ["", "contact/", "mentors/", "learn/", "nri-families/usa/", "learn/choosing-an-online-tutor/"].includes(route))
         await page.screenshot({
-          path: `qa/screenshots/${route.replace("/", "") || "home"}-${width}-${theme}.png`,
+          path: `qa/screenshots/${route.replaceAll("/", "-").replace(/-$/, '') || "home"}-${width}-${theme}.png`,
           fullPage: true,
         });
       if (width !== 320 && route === "")
@@ -151,7 +144,7 @@ for (const theme of ["light", "dark"]) {
     const storage = await page.evaluate(() => Object.keys(localStorage));
     assert.deepEqual(storage, ["friction-theme"]);
     results.push(
-      `${width}px ${theme}: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed`,
+      `${width}px ${theme}: ${pages.length} pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed`,
     );
     console.log(results.at(-1));
     await context.close();

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert/strict";
 import { site } from "../src/config.mjs";
+import { pageRegistry } from '../src/lib/seo.mjs';
 
 const root = path.resolve(process.env.VERIFY_DIR || "dist");
 const files = fs
@@ -54,7 +55,7 @@ for (const file of files) {
     checked++;
   }
 }
-assert.equal(files.length, 12, "All twelve pages are built");
+assert.equal(files.length, Object.keys(pageRegistry).length, "All registered pages are built");
 assert(fs.existsSync(path.join(root, ".nojekyll")));
 console.log(
   `PASS: ${files.length} pages, ${checked} local links/assets/fragments, page headings and content safeguards. Base: ${base || "/"}`,

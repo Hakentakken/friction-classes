@@ -1,0 +1,6 @@
+---
+import { breadcrumbs, routeFromPath } from '../lib/seo.mjs';
+import { link } from '../config.mjs';
+const crumbs = breadcrumbs(routeFromPath(Astro.url.pathname));
+---
+<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>{crumbs.map((crumb,i) => <li>{i < crumbs.length - 1 ? <a href={link(crumb.route)}>{crumb.name}</a> : <span aria-current="page">{crumb.name}</span>}</li>)}</ol></nav>

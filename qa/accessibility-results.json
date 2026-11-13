@@ -72,6 +72,108 @@
     "violations": []
   },
   {
+    "route": "learn/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/usa/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uk/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uae/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/canada/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/australia/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/singapore/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-1-3/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-4-6/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-7-9/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/choosing-an-online-tutor/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/building-maths-confidence/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/staying-connected-to-curriculum/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/why-one-on-one-tuition/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/study-routines-across-time-zones/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/understanding-learning-progress/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/switching-school-curricula/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
     "route": "/",
     "width": 1440,
     "theme": "light",
@@ -144,6 +246,108 @@
     "violations": []
   },
   {
+    "route": "learn/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/usa/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uk/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uae/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/canada/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/australia/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/singapore/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-1-3/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-4-6/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-7-9/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/choosing-an-online-tutor/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/building-maths-confidence/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/staying-connected-to-curriculum/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/why-one-on-one-tuition/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/study-routines-across-time-zones/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/understanding-learning-progress/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "learn/switching-school-curricula/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
     "route": "/",
     "width": 390,
     "theme": "dark",
@@ -216,6 +420,108 @@
     "violations": []
   },
   {
+    "route": "learn/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/usa/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uk/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uae/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/canada/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/australia/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/singapore/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-1-3/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-4-6/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-7-9/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/choosing-an-online-tutor/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/building-maths-confidence/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/staying-connected-to-curriculum/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/why-one-on-one-tuition/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/study-routines-across-time-zones/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/understanding-learning-progress/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/switching-school-curricula/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
     "route": "/",
     "width": 1440,
     "theme": "dark",
@@ -283,6 +589,108 @@
   },
   {
     "route": "404.html",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/usa/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uk/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/uae/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/canada/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/australia/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/singapore/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-1-3/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-4-6/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/classes-7-9/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/choosing-an-online-tutor/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/building-maths-confidence/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/staying-connected-to-curriculum/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/why-one-on-one-tuition/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/study-routines-across-time-zones/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/understanding-learning-progress/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "learn/switching-school-curricula/",
     "width": 1440,
     "theme": "dark",
     "violations": []

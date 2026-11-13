@@ -3,7 +3,7 @@ import { site } from "./src/config.mjs";
 
 export default defineConfig({
   output: "static",
-  site: site.siteUrl || undefined,
+  site: new URL(site.siteUrl).origin,
   base: site.basePath,
   trailingSlash: "always",
   build: { format: "directory" },

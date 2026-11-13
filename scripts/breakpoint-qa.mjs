@@ -5,13 +5,14 @@ import fs from 'node:fs';
 
 const browser = await chromium.launch();
 const results = [];
+const origin = process.env.QA_URL || 'http://localhost:4322';
 for (const theme of ['light', 'dark']) {
   const context = await browser.newContext({ colorScheme: theme, reducedMotion: 'reduce' });
   const page = await context.newPage();
   for (const width of [430, 600, 768, 1024, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
-    for (const route of ['', 'mentors/', 'contact/']) {
-      await page.goto(`http://localhost:4321/${route}`);
+    for (const route of ['', 'mentors/', 'contact/', 'nri-families/usa/', 'learn/', 'learn/choosing-an-online-tutor/', 'programs/classes-1-3/']) {
+      await page.goto(`${origin}/${route}`);
       await page.evaluate(() => document.fonts.ready);
       const issues = await page.evaluate(() => [...document.querySelectorAll('h1,h2,h3')]
         .filter(el => el.scrollWidth > el.clientWidth + 1).map(el => el.textContent));
@@ -29,4 +30,4 @@ for (const theme of ['light', 'dark']) {
 }
 await browser.close();
 fs.writeFileSync('qa/breakpoint-results.json', JSON.stringify(results, null, 2));
-console.log('PASS: 30 additional viewport/page/theme checks; 430px mentor accessibility passed in both themes.');
+console.log(`PASS: ${results.length} additional viewport/page/theme checks; 430px mentor accessibility passed in both themes.`);

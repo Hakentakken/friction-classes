@@ -1,28 +1,23 @@
-Friction Classes — local verification
+Friction Classes - local verification, 13 November 2026
 
 Production build: PASS. Astro/TypeScript: 0 errors, 0 warnings, 0 hints.
-Generated static pages: 12.
-Root deployment: 283 local links/assets/fragments passed.
-Repository-path deployment (/friction-classes/): 283 local links/assets/fragments passed.
+29 static HTML pages; 28 sitemap URLs; no orphan pages.
+Root and project-path profiles: 1,283 local references and 92 structured entities validated.
+Unique metadata, canonicals, social tags/image, heading order, sitemap/robots and time-zone regression checks passed.
 Dependency audit: 0 vulnerabilities.
 
-Chromium browser verification:
-- Every page at 320px, 390px and 1440px in light and dark mode: 72 page checks.
-- Theme persistence, mobile menu/Escape, FAQ and WhatsApp form validation passed.
-- Form destination and URL encoding checked without sending a WhatsApp message.
-- No browser console/page errors, horizontal overflow or broken images.
-- No-JavaScript hero and direct WhatsApp CTA passed.
-- Home, mentor and contact pages at 430/600/768/1024/1920px in both themes: 30 additional checks.
-- Heading clipping at 430px fixed with a single-column mentor layout.
-- 48 WCAG A/AA automated audits: zero violations after contrast and accessible-name fixes.
-- Two additional 430px mentor accessibility audits: zero violations.
-- 18 screenshots saved. Mobile/desktop light/dark visuals manually inspected.
+Chromium: 174 page/viewport/theme checks; 116 axe audits with 0 violations.
+70 additional breakpoint checks; 2 additional 430px mentor accessibility audits passed.
+Theme persistence, mobile menu/Escape, FAQs, validation, encoded WhatsApp URLs and no-JS CTA passed.
+No browser errors, horizontal overflow or broken images. No WhatsApp message sent.
+Final reveal effects: four viewport/theme combinations passed; full home screenshots saved.
 
-Not verified:
-- GitHub repository creation/push and live Pages deployment: GitHub CLI is unavailable.
-- Final custom domain/DNS: domain has not been chosen.
-- Real WhatsApp phone-app handoff: tests intercept opening; no message was sent.
-- Future mentor photo crops: no photos were supplied.
-- Safari, Firefox and physical devices: browser automation used Chromium.
+Lighthouse mobile: final home 95/100/100/100 (Performance/Accessibility/Best Practices/SEO).
+Six inner-page samples: Performance 94-100; other categories 100; measured CLS 0.
+Earlier home run was 83 before final reveal optimization; all reports retained.
+Public-config results use a reserved canonical fixture over localhost. Default local SEO is 69 due to intentional noindex.
+See qa/SEO_REPORT.md for individual scores, metrics, settings and limitations.
 
-Exact setup, editing and GitHub publishing commands are in README.md.
+Not verified: public hosting, DNS, search indexing, hosted schema validators, phone-app handoff, Safari/Firefox or physical devices.
+No final domain chosen or deployment performed. Local development remains on port 4321.
+Owner search-console and launch steps: SEO_CHECKLIST.md.

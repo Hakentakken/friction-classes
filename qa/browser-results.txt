@@ -1,8 +1,8 @@
-320px light: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
-390px light: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
-1440px light: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
-320px dark: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
-390px dark: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
-1440px dark: 12 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+320px light: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+390px light: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+1440px light: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+320px dark: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+390px dark: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
+1440px dark: 29 pages, no overflow/broken images, theme persistence, FAQ, navigation and validated WhatsApp form passed
 No browser console or page errors. No-JS hero and direct WhatsApp CTA verified.
 WhatsApp destinations tested with interception; no message sent.

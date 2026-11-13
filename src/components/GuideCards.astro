@@ -1,0 +1,6 @@
+---
+import { link } from '../config.mjs';
+interface Props { items: {title:string;description:string;path:string;label?:string}[] }
+const {items} = Astro.props;
+---
+<div class="guide-grid">{items.map(item => <article class="guide-card">{item.label && <p class="eyebrow">{item.label}</p>}<h3><a href={link(item.path)}>{item.title}<span aria-hidden="true"> ↗</span></a></h3><p>{item.description}</p></article>)}</div>

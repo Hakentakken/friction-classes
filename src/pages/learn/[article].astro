@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import GuideCards from '../../components/GuideCards.astro';
+import { articles } from '../../data/guides.mjs';
+import { link } from '../../config.mjs';
+export function getStaticPaths() { return articles.map(article => ({params:{article:article.slug},props:{article}})); }
+const {article} = Astro.props;
+---
+<Layout title={article.title}><section class="page-hero wrap"><Breadcrumbs/><p class="eyebrow">{article.category} · PARENT NOTEBOOK</p><h1>{article.title}</h1><p>{article.intro}</p></section><div class="section wrap guide-layout"><article class="guide-prose">{article.sections.map((section,i) => <section id={`section-${i}`}><h2>{section.heading}</h2>{section.paragraphs.map(paragraph => <p>{paragraph}</p>)}{section.items && <ul>{section.items.map(item => <li>{item}</li>)}</ul>}</section>)}<aside class="example-note"><h2>One thing to try</h2><p>{article.takeaway}</p></aside><section><h2>Connect this to your child’s learning</h2><ul>{article.links.map(([label,path]) => <li><a href={link(path)}>{label}</a></li>)}</ul><p>Have a specific question about your child? <a href={link('contact/')}>Share their class, subject and preferred time</a> so we can discuss an appropriate next step.</p></section></article><aside class="guide-sidebar"><p class="eyebrow">IN THIS GUIDE</p><nav aria-label="Article sections">{article.sections.map((section,i) => <a href={`#section-${i}`}>{section.heading}</a>)}</nav><p class="small-note">Original parent guidance from Friction Classes. Use it as a starting point for a conversation with your child, school or mentor.</p><a class="text-link" href={link('learn/')}>All parent learning guides ↗</a></aside></div><section class="section wrap"><p class="eyebrow">KEEP EXPLORING</p><h2>Another useful perspective.</h2><GuideCards items={articles.filter(item => article.related.includes(item.slug)).map(item => ({title:item.title,description:item.description,path:`learn/${item.slug}/`}))}/></section></Layout>

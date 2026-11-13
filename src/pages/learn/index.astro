@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import GuideCards from '../../components/GuideCards.astro';
+import { articles } from '../../data/guides.mjs';
+import { link } from '../../config.mjs';
+---
+<Layout title="Learning guides for parents"><section class="page-hero wrap"><Breadcrumbs/><p class="eyebrow">THE PARENT NOTEBOOK</p><h1>A little clarity.<br/><em>For the learning journey.</em></h1><p>Thoughtful, practical guides for choosing support, building confidence and navigating schoolwork across borders.</p></section><section class="section wrap"><h2>Start with the question on your mind.</h2><p class="reading-intro">These guides offer ideas to discuss with your child and school. They do not promise results or replace a school’s placement, assessment or support decisions.</p><GuideCards items={articles.map(article => ({title:article.title,description:article.description,path:`learn/${article.slug}/`,label:article.category}))}/></section><section class="section wrap reading-grid"><h2>Looking for<br/><em>your local context?</em></h2><div class="prose"><p>Our country guides cover school-system questions and dated examples of local class windows alongside time in India. The NRI guide connects these with curriculum and grade-band support.</p><a class="text-link" href={link('nri-families/#country-guides')}>Explore the six country guides ↗</a><p>Or explore <a href={link('programs/')}>one-on-one programs for Classes 1–9</a> to see the kind of learning we can discuss.</p></div></section></Layout>
