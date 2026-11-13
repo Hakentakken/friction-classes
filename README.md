@@ -24,19 +24,19 @@ npm run preview
 
 ## Exactly where to edit
 
-| Content | Location |
-| --- | --- |
-| Site name, tagline, phone, WhatsApp, **EMAIL**, final site URL, base path, social links | **`src/config.mjs`**, `site` object |
-| Subjects and their copy, grade bands, curricula, time zones | **`src/config.mjs`**, corresponding arrays |
-| Mentor names, institutions, disciplines and short bios | **`src/config.mjs`**, `team` array |
-| FAQs and four learning steps | **`src/config.mjs`**, `faqs` and `steps` |
-| Home page text and section order | **`src/pages/index.astro`** |
-| Other page headings and text, contact form, privacy and terms | **`src/pages/[page].astro`** |
-| Closing invitation text | **`src/components/Closing.astro`** |
-| Header, footer, theme and mobile navigation | **`src/layouts/Layout.astro`** |
-| Colours, typography, spacing, breakpoints and motion | **`src/styles/global.css`** |
-| Original main illustration | **`src/assets/images/learning-scene.svg`** |
-| Logo mark, standalone wordmark, favicon | **`src/components/Logo.astro`**, **`public/logo.svg`**, **`public/favicon.svg`** |
+| Content                                                                                 | Location                                                                         |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Site name, tagline, phone, WhatsApp, **EMAIL**, final site URL, base path, social links | **`src/config.mjs`**, `site` object                                              |
+| Subjects and their copy, grade bands, curricula, time zones                             | **`src/config.mjs`**, corresponding arrays                                       |
+| Mentor names, institutions, disciplines and short bios                                  | **`src/config.mjs`**, `team` array                                               |
+| FAQs and four learning steps                                                            | **`src/config.mjs`**, `faqs` and `steps`                                         |
+| Home page text and section order                                                        | **`src/pages/index.astro`**                                                      |
+| Other page headings and text, contact form, privacy and terms                           | **`src/pages/[page].astro`**                                                     |
+| Closing invitation text                                                                 | **`src/components/Closing.astro`**                                               |
+| Header, footer, theme and mobile navigation                                             | **`src/layouts/Layout.astro`**                                                   |
+| Colours, typography, spacing, breakpoints and motion                                    | **`src/styles/global.css`**                                                      |
+| Original main illustration                                                              | **`src/assets/images/learning-scene.svg`**                                       |
+| Logo mark, standalone wordmark, favicon                                                 | **`src/components/Logo.astro`**, **`public/logo.svg`**, **`public/favicon.svg`** |
 
 Unknown business values are marked `PLACEHOLDER` in **one central file: `src/config.mjs`**. `EMAIL`, `siteUrl` and `socialLinks` are empty deliberately. Do not invent an email or a final domain. All email elements are conditional and appear automatically once `EMAIL` is filled in. A canonical URL is emitted only when `siteUrl` is configured. Production deployment supplies the actual GitHub Pages origin and path automatically.
 
@@ -121,11 +121,16 @@ npm test
 # With npm run preview running in another terminal:
 npx playwright install chromium
 node scripts/browser-qa.mjs
+node scripts/breakpoint-qa.mjs
 ```
 
 `scripts/verify.mjs` checks every generated local link, asset and fragment, all twelve pages, single H1 headings, skip links, hidden email and prohibited claim patterns. Run it with the same `BASE_PATH` used for the build.
 
 `scripts/browser-qa.mjs` visits every page at 320px, 390px and 1440px in both themes; checks horizontal overflow, broken images and console errors; exercises persisted theme switching, mobile menu/Escape, FAQs, required/whitespace form validation and encoded WhatsApp destinations. It intercepts WhatsApp opening, so no message is sent. Full-page home, mentor and contact screenshots at mobile and desktop widths in both themes are saved to `qa/screenshots/`. The report is `qa/browser-results.txt`.
+
+The same browser run audits all pages at 390px and 1440px in both themes with axe-core's WCAG 2.1 A/AA rules. Its findings are saved to `qa/accessibility-results.json`. Automated checks supplement visual and keyboard checks; they are not a claim of formal accessibility certification.
+
+Additional breakpoint checks cover the home, mentor and contact pages at 430px, 600px, 768px, 1024px and 1920px in both themes, including heading clipping. See `qa/breakpoint-results.json`. Final local results: 12 built pages, 283 verified local references per deployment base, 72 main page/viewport/theme checks, 30 additional breakpoint checks, and no violations in 48 full-site plus two focused automated accessibility audits. Eighteen screenshots are saved, including both themes at mobile and desktop widths.
 
 Live GitHub deployment, DNS/custom-domain ownership, a real WhatsApp handoff on a phone, and future real-photo crops cannot be verified locally. Browser QA is Chromium-based, not a complete Safari/Firefox or physical-device matrix. The supplied privacy and terms text describes this site's behavior and leaves future class arrangements to direct agreement.
 

@@ -26,7 +26,7 @@ jobs:
       - name: Build with the configured Pages URL
         run: npm run build
         env:
-          ASTRO_TELEMETRY_DISABLED: '1'
+          ASTRO_TELEMETRY_DISABLED: "1"
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}/
       - name: Verify generated links

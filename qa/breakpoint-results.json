@@ -1,0 +1,212 @@
+[
+  {
+    "width": 430,
+    "theme": "light",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 430,
+    "theme": "light",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 430,
+    "theme": "light",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "light",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "light",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "light",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "light",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "light",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "light",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "light",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "light",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "light",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "light",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "light",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "light",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "dark",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "dark",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 600,
+    "theme": "dark",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "dark",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "dark",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 768,
+    "theme": "dark",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "dark",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "dark",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1024,
+    "theme": "dark",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "dark",
+    "route": "/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "dark",
+    "route": "mentors/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1920,
+    "theme": "dark",
+    "route": "contact/",
+    "clippedHeadings": 0,
+    "horizontalOverflow": false
+  }
+]

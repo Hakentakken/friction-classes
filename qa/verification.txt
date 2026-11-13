@@ -1,0 +1,28 @@
+Friction Classes — local verification
+
+Production build: PASS. Astro/TypeScript: 0 errors, 0 warnings, 0 hints.
+Generated static pages: 12.
+Root deployment: 283 local links/assets/fragments passed.
+Repository-path deployment (/friction-classes/): 283 local links/assets/fragments passed.
+Dependency audit: 0 vulnerabilities.
+
+Chromium browser verification:
+- Every page at 320px, 390px and 1440px in light and dark mode: 72 page checks.
+- Theme persistence, mobile menu/Escape, FAQ and WhatsApp form validation passed.
+- Form destination and URL encoding checked without sending a WhatsApp message.
+- No browser console/page errors, horizontal overflow or broken images.
+- No-JavaScript hero and direct WhatsApp CTA passed.
+- Home, mentor and contact pages at 430/600/768/1024/1920px in both themes: 30 additional checks.
+- Heading clipping at 430px fixed with a single-column mentor layout.
+- 48 WCAG A/AA automated audits: zero violations after contrast and accessible-name fixes.
+- Two additional 430px mentor accessibility audits: zero violations.
+- 18 screenshots saved. Mobile/desktop light/dark visuals manually inspected.
+
+Not verified:
+- GitHub repository creation/push and live Pages deployment: GitHub CLI is unavailable.
+- Final custom domain/DNS: domain has not been chosen.
+- Real WhatsApp phone-app handoff: tests intercept opening; no message was sent.
+- Future mentor photo crops: no photos were supplied.
+- Safari, Firefox and physical devices: browser automation used Chromium.
+
+Exact setup, editing and GitHub publishing commands are in README.md.

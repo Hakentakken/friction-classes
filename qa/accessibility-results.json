@@ -1,0 +1,290 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "about/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "subjects/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "mentors/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "how-it-works/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "faq/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "contact/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "privacy/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "terms/",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "width": 390,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "about/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "programs/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "subjects/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "mentors/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "how-it-works/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "nri-families/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "faq/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "contact/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "privacy/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "terms/",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "width": 1440,
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "about/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "subjects/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "mentors/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "how-it-works/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "faq/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "contact/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "privacy/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "terms/",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "width": 390,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "about/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "programs/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "subjects/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "mentors/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "how-it-works/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "nri-families/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "faq/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "contact/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "privacy/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "terms/",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "route": "404.html",
+    "width": 1440,
+    "theme": "dark",
+    "violations": []
+  }
+]

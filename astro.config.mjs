@@ -1,10 +1,10 @@
-import { defineConfig } from 'astro/config';
-import { site } from './src/config.mjs';
+import { defineConfig } from "astro/config";
+import { site } from "./src/config.mjs";
 
 export default defineConfig({
-  output: 'static',
+  output: "static",
   site: site.siteUrl || undefined,
   base: site.basePath,
-  trailingSlash: 'always',
-  build: { format: 'directory' },
+  trailingSlash: "always",
+  build: { format: "directory" },
 });
