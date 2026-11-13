@@ -56,7 +56,7 @@ src/assets/team/manoranjan.jpg
 src/assets/team/utkarsh.jpg
 ```
 
-`src/components/Team.astro` discovers the JPG files at build time with `import.meta.glob`. No code change is needed. Missing files retain designed initial avatars. Use consented photos with the face comfortably centred; a square or portrait crop works well. For a new team member, add a `team` record with a unique lowercase `slug` and a matching `<slug>.jpg` file.
+`src/components/Team.astro` first checks `public/images/people/<slug>` in WebP, JPEG, JPG and PNG order, then falls back to the JPG files above. The supplied Vivek, Tamanna and Utsav photos live in `public/images/people/`, alongside smaller WebP versions. When replacing a photo, update or remove its WebP version too so an older optimized file is not selected. Public URLs respect the configured GitHub Pages base path. Missing files retain designed initial avatars. Use consented photos with the face comfortably centred; a square or portrait crop works well. For a new team member, add a `team` record with a unique lowercase `slug` and a matching `<slug>.jpg` file.
 
 To replace the hero artwork later, place a local asset in `src/assets/images/`, update the `scene` import in `src/pages/index.astro`, and update its width, height and alternative text. Never hotlink images.
 
