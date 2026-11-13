@@ -1,0 +1,45 @@
+---
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource/dm-sans/700.css';
+import '@fontsource/fraunces/400.css';
+import '@fontsource/fraunces/400-italic.css';
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+import Button from '../components/Button.astro';
+import { site, navigation, link, whatsapp } from '../config.mjs';
+interface Props { title: string; description?: string }
+const { title, description = 'Personalized one-on-one online tuition for Classes 1–9. Thoughtful mentors, flexible time zones and learning aligned to your child’s curriculum.' } = Astro.props;
+const canonical = site.siteUrl ? new URL(Astro.url.pathname, site.siteUrl).href : undefined;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#f6f4eb"/><title>{title} | {site.name}</title><link rel="icon" type="image/svg+xml" href={link('favicon.svg')}/>{canonical && <link rel="canonical" href={canonical}/>}<meta property="og:title" content={`${title} | ${site.name}`}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/>
+<script is:inline>
+  (() => { let theme; try { theme = localStorage.getItem('friction-theme'); } catch {} document.documentElement.dataset.theme = theme === 'light' || theme === 'dark' ? theme : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; })();
+</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner wrap"><a class="brand" href={link()} aria-label="Friction Classes home"><Logo/><span>friction<span class="brand-sub">CLASSES</span></span></a>
+<nav id="main-nav" aria-label="Main navigation">{navigation.map(([label, path]) => <a href={link(path)} aria-current={Astro.url.pathname === link(path) ? 'page' : undefined}>{label}</a>)}<a class="mobile-contact" href={link('contact/')}>Contact</a></nav>
+<div class="header-actions"><button class="theme-toggle" type="button" aria-label="Switch to night mode" title="Switch theme"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14a8 8 0 0 1-10-10 8 8 0 1 0 10 10Z"/></svg><span class="theme-label">Night</span></button><div class="header-cta"><Button/></div><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button></div></div></header>
+<main id="main"><slot/></main>
+<footer class="site-footer"><div class="wrap footer-top"><div class="footer-brand"><a class="brand" href={link()}><Logo/><span>friction<span class="brand-sub">CLASSES</span></span></a><p>{site.tagline}</p><p class="muted">One child. One mentor.<br/>Learning, with a little more care.</p></div><div><h2>Explore</h2><a href={link('about/')}>About us</a><a href={link('programs/')}>Programs</a><a href={link('subjects/')}>Subjects</a><a href={link('mentors/')}>Our mentors</a></div><div><h2>For parents</h2><a href={link('how-it-works/')}>How it works</a><a href={link('nri-families/')}>For NRI families</a><a href={link('faq/')}>FAQs</a><a href={link('contact/')}>Contact</a></div><div><h2>Let’s talk</h2><a href={whatsapp()} target="_blank" rel="noopener noreferrer">Book a Demo Class ↗</a><a href={`tel:+${site.whatsapp}`}>{site.phone}</a>{site.EMAIL && <a href={`mailto:${site.EMAIL}`}>{site.EMAIL}</a>}{site.socialLinks.map((social: {url:string;label:string}) => <a href={social.url} target="_blank" rel="noopener noreferrer">{social.label}</a>)}<p class="muted">A conversation is a good start.</p></div></div><div class="wrap footer-bottom"><span>© Friction Classes</span><div><a href={link('privacy/')}>Privacy</a><a href={link('terms/')}>Terms</a></div><span>Founded by Vivek</span></div></footer>
+<a class="floating-whatsapp" href={whatsapp(site.generalMessage)} target="_blank" rel="noopener noreferrer" aria-label="Chat with Friction Classes on WhatsApp (opens a new tab)"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5Z"/><path d="M9 8c0 4 3 7 7 7l1-2-3-1-1 1-2-2 1-1-1-3Z"/></svg><span>Let’s talk</span></a>
+<script>
+const themeButton = document.querySelector<HTMLButtonElement>('.theme-toggle')!;
+function updateThemeButton() { const dark = document.documentElement.dataset.theme === 'dark'; themeButton.setAttribute('aria-label', `Switch to ${dark ? 'day' : 'night'} mode`); themeButton.querySelector('.theme-label')!.textContent = dark ? 'Day' : 'Night'; }
+updateThemeButton();
+themeButton.addEventListener('click', () => { const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; try { localStorage.setItem('friction-theme', theme); } catch {} updateThemeButton(); });
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => { let saved; try { saved = localStorage.getItem('friction-theme'); } catch {} if (!saved) { document.documentElement.dataset.theme = event.matches ? 'dark' : 'light'; updateThemeButton(); } });
+const menu = document.querySelector<HTMLButtonElement>('.menu-toggle')!;
+const nav = document.querySelector<HTMLElement>('#main-nav')!;
+function closeMenu() { menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); nav.classList.remove('open'); }
+menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); nav.classList.toggle('open', open); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
+document.addEventListener('click', e => { if (e.target instanceof Node && !document.querySelector('.site-header')!.contains(e.target)) closeMenu(); });
+window.matchMedia('(min-width: 1081px)').addEventListener('change', closeMenu);
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+ const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); } }), { threshold: 0.08 });
+ document.querySelectorAll('.reveal').forEach(el => { el.classList.add('will-reveal'); observer.observe(el); });
+}
+</script></body></html>

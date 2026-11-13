@@ -1,0 +1,13 @@
+---
+import { site } from '../config.mjs';
+---
+<div class="timezone-board"><div class="board-heading"><span class="status-dot"></span><span>A world of different routines.<br/><strong>Room for yours.</strong></span><span aria-hidden="true">◎</span></div><div class="zone-grid">{site.timeZones.map(tz => <div class="zone"><span>{tz.country}</span><strong data-zone={tz.zone}>Flexible slots</strong><small>{tz.city}</small></div>)}</div><p class="board-note">Local times shown for representative cities, not available slots.<br/>We confirm your city, time zone and schedule together.</p></div>
+<script>
+function updateClocks() {
+  document.querySelectorAll<HTMLElement>('[data-zone]').forEach(el => {
+    el.textContent = new Intl.DateTimeFormat('en-GB', { timeZone: el.dataset.zone, hour: '2-digit', minute: '2-digit', hour12: true }).format(new Date());
+  });
+}
+updateClocks();
+setInterval(updateClocks, 60000);
+</script>

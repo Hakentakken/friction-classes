@@ -1,0 +1,6 @@
+---
+import { whatsapp } from '../config.mjs';
+interface Props { href?: string; secondary?: boolean; label?: string }
+const { href = whatsapp(), secondary = false, label = 'Book a Demo Class' } = Astro.props;
+---
+<a class:list={['button', { secondary }]} href={href} target={href.startsWith('https://wa.me') ? '_blank' : undefined} rel={href.startsWith('https://wa.me') ? 'noopener noreferrer' : undefined}>{label}<span aria-hidden="true">↗</span></a>

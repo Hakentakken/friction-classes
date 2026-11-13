@@ -1,0 +1,17 @@
+---
+import { site } from '../config.mjs';
+import type { ImageMetadata } from 'astro';
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/team/*.jpg', { eager: true });
+const { preview = false } = Astro.props;
+const members = preview ? site.team.slice(0, 3) : site.team;
+---
+<div class="team-grid">
+{members.map((person, i) => {
+  const photo = photos[`../assets/team/${person.slug}.jpg`]?.default;
+  return <article class="mentor-card reveal"><div class:list={['portrait', `tone-${i % 3}`]}>
+    {photo ? <img src={photo.src} width="440" height="400" loading="lazy" alt={person.name}/> : <><span class="portrait-lines" aria-hidden="true"></span><span class="monogram" aria-hidden="true">{person.name.charAt(0)}</span><span class="portrait-note">Meet your mentor</span></>}
+    <span class="institution">{person.institution}</span>
+  </div><div class="mentor-copy"><span class="small-label">{person.role}</span><h3>{person.name}</h3><p class="discipline">{person.discipline}</p><p>{person.bio}</p></div></article>;
+})}
+{!preview && <article class="mentor-card joining reveal"><span aria-hidden="true">＋</span><h3>More mentors joining</h3><p>We’re growing thoughtfully, with people who care about the learner behind every question.</p></article>}
+</div>
