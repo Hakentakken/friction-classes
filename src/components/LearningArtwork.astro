@@ -1,0 +1,22 @@
+---
+import { link } from '../config.mjs';
+interface Props { scene: 'personal-learning' | 'family-curiosity'; caption: string }
+const { scene, caption } = Astro.props;
+const alt = scene === 'personal-learning'
+  ? 'Illustration of a child exploring wooden shapes while learning with a tutor on a laptop.'
+  : 'Illustration of a father and child discovering plants together in a picture book at home.';
+---
+<figure class="learning-artwork">
+  <img src={link(`images/learning/${scene}-960.webp`)}
+    srcset={[480,960,1440].map(width => `${link(`images/learning/${scene}-${width}.webp`)} ${width}w`).join(', ')}
+    sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1080px) 45vw, 560px"
+    width="1536" height="1024" loading="lazy" decoding="async" alt={alt}/>
+  <figcaption><span>{caption}</span><span class="art-credit">AI-generated illustration</span></figcaption>
+</figure>
+<style>
+  .learning-artwork { margin: 32px 0 0; }
+  img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: 8px 40px 8px 8px; }
+  figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-top: 12px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+  .art-credit { font-size: 10px; }
+  @media(max-width:760px) { img { border-top-right-radius: 28px; } }
+</style>

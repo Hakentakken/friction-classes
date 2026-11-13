@@ -1,0 +1,134 @@
+[
+  {
+    "theme": "light",
+    "width": 390,
+    "route": "/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/personal-learning-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "route": "nri-families/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "route": "learn/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "route": "/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/personal-learning-960.webp",
+      "width": 546,
+      "height": 364
+    },
+    "violations": 0
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "route": "nri-families/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-960.webp",
+      "width": 460,
+      "height": 307
+    },
+    "violations": 0
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "route": "learn/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-960.webp",
+      "width": 585,
+      "height": 390
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "route": "/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/personal-learning-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "route": "nri-families/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "route": "learn/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-480.webp",
+      "width": 358,
+      "height": 239
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "route": "/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/personal-learning-960.webp",
+      "width": 546,
+      "height": 364
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "route": "nri-families/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-960.webp",
+      "width": 460,
+      "height": 307
+    },
+    "violations": 0
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "route": "learn/",
+    "image": {
+      "source": "http://localhost:4322/images/learning/family-curiosity-960.webp",
+      "width": 585,
+      "height": 390
+    },
+    "violations": 0
+  }
+]

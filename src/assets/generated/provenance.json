@@ -1,0 +1,20 @@
+{
+  "method": "Built-in image_gen tool",
+  "generated": "2026-11-13",
+  "purpose": "Fictional editorial artwork, not real pupils, mentors or testimonials",
+  "assets": [
+    {
+      "name": "personal-learning",
+      "original": "src/assets/generated/personal-learning.png",
+      "web": "public/images/learning/personal-learning-{480,960,1440}.webp",
+      "prompt": "Create an original premium editorial illustration for Friction Classes, a warm one-on-one online tuition website for children. Landscape 3:2 composition. Painterly gouache and cut-paper collage on warm ivory paper, subtle grain, sophisticated storybook art, forest green #214f3d, sage, pale chartreuse, terracotta and soft peach. Scene: a curious Indian girl about 9 years old at a sunny home study desk, joyfully discovering a maths idea using a few wooden geometric blocks and a notebook. A small open laptop shows a friendly young adult woman tutor, clearly an illustrated video lesson. Natural anatomically believable hands, calm human expressions, beautifully considered still-life objects, plant, pencil cup, window light. Rich but uncluttered composition, full scene fills canvas, safe generous edges for responsive cropping. No text, no letters, no numbers, no logos, no watermarks. Clearly artistic fictional illustration, never a photograph or testimonial. The artwork should feel quietly joyful, personal and premium, not generic corporate vector art, not glossy 3D."
+    },
+    {
+      "name": "family-curiosity",
+      "original": "src/assets/generated/family-curiosity.png",
+      "web": "public/images/learning/family-curiosity-{480,960,1440}.webp",
+      "prompt": "Original premium editorial illustration for Friction Classes parent guides and NRI family learning website. Landscape 3:2 format. Warm tactile gouache and cut-paper collage storybook style, fine paper grain, forest green, sage, ivory, muted peach and golden afternoon sunlight, same cohesive palette as a sophisticated family education magazine. An Indian father and his 8-year-old son sit together at a home table, looking with curiosity at an open picture book containing botanical drawings; child points at a leaf drawing and dad listens warmly. A small leafy potted plant, a closed laptop, pencils and two books on the table. Through the window subtle leafy garden and distant city rooftops evoke a home anywhere in the world. Human believable hands, inclusive everyday clothing, calm candid connection, lively botanical details. Compose figures centrally with generous edge margins; full scene fills canvas. No text, letters, numbers, logos, watermarks, flags or maps. Clearly fictional artistic illustration, not a photo of actual customers. Beautiful intimate editorial art, not generic corporate vector, not glossy 3D."
+    }
+  ],
+  "optimization": "Sharp resize to 480/960/1440px; WebP quality 78 effort 6. Intrinsic dimensions, responsive srcset, lazy loading, async decoding."
+}
