@@ -2,6 +2,14 @@
 
 This checklist is for the site owner. No credentials are needed by the project or this assistant. Search engines decide whether and how to show pages; neither indexing nor rankings are guaranteed.
 
+## Current GitHub Pages setup
+
+- Public site / Google URL-prefix property: `https://hakentakken.github.io/friction-classes/`
+- Sitemap to submit to Google and Bing: `https://hakentakken.github.io/friction-classes/sitemap.xml`
+- Google verification file: `public/google2b2a79528cee6772.html`, served after deployment at `https://hakentakken.github.io/friction-classes/google2b2a79528cee6772.html`. Keep this file after verification.
+- After confirming the file loads, click **Verify** in the matching Search Console URL-prefix property, then submit the sitemap. Publishing the file does not itself confirm account verification or sitemap submission.
+- No custom domain or DNS verification is required for this URL-prefix setup. Bing account verification/submission is still a separate step.
+
 ## 1. Choose and verify the public URL
 
 - Decide the canonical domain or use the real GitHub Pages project URL initially. Do not publish an invented domain.

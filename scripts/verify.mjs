@@ -3,11 +3,12 @@ import path from "node:path";
 import assert from "node:assert/strict";
 import { site } from "../src/config.mjs";
 import { pageRegistry } from '../src/lib/seo.mjs';
+import { isVerificationFile } from './verification-files.mjs';
 
 const root = path.resolve(process.env.VERIFY_DIR || "dist");
 const files = fs
   .readdirSync(root, { recursive: true })
-  .filter((f) => f.endsWith(".html"));
+  .filter((f) => f.endsWith(".html") && !isVerificationFile(root, f));
 const base = site.basePath.replace(/\/$/, "");
 let checked = 0;
 for (const file of files) {

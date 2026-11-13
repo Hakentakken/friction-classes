@@ -17,7 +17,7 @@ export const site = {
   // Illustrative, dated time-zone comparisons, not offered appointment slots.
   comparisonDates: ['2027-01-15', '2027-07-15'],
   contentReviewed: '2026-11-13',
-  socialLinks: [], // PLACEHOLDER: add { label: 'Instagram', url: 'https://...' } when known.
+  socialLinks: [{ label: 'Instagram @frictionclasses.ind', url: 'https://www.instagram.com/frictionclasses.ind/' }],
   demoMessage:
     "Hi Friction Classes, I'd like to book a demo class for my child (Class __).",
   generalMessage:
